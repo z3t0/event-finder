@@ -1,0 +1,6 @@
+* event-finder
+
+This is a script I wrote for SCESoc. The role of the script is to find events related to engineering and computing.
+
+** License
+MIT
