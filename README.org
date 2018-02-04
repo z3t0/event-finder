@@ -3,20 +3,23 @@
 This is a script I wrote for SCESoc. The role of the script is to find events related to engineering and computing.
 
 ** Setup
+Python 3.6+ is required to run this script
+
 1. Install virtualenv
 2. Create a virtual environment
    #+BEGIN_SRC sh
 virtualenv .venv
    #+END_SRC
-3. Enter the environment
+3. Enter API tokens by copying secrets_template.json to secrets.json and editing appropriately
+4. Enter the environment
    #+BEGIN_SRC sh
    source ./venv/bin/activate
    #+END_SRC
-4. Install dependencies
+5. Install dependencies
    #+BEGIN_SRC sh
    pip install -r requirements.txt
    #+END_SRC
-5. Run the program
+6. Run the program
     #+BEGIN_SRC sh
     python event-finder.py address distance output
     #+END_SRC
@@ -27,7 +30,12 @@ Where:
 - output: the file where the data will be written to, as JSON
   
 ** Credits
-# Copyright (C) 2018 by Rafi Khan
+Copyright (C) 2018 by Rafi Khan
+
+The external services used in this script are:
+- Google Maps Geocoding API
+- EventBrite API
+- Meetup API
 
 ** License
 MIT
