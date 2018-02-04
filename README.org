@@ -2,5 +2,32 @@
 
 This is a script I wrote for SCESoc. The role of the script is to find events related to engineering and computing.
 
+** Setup
+1. Install virtualenv
+2. Create a virtual environment
+   #+BEGIN_SRC sh
+virtualenv .venv
+   #+END_SRC
+3. Enter the environment
+   #+BEGIN_SRC sh
+   source ./venv/bin/activate
+   #+END_SRC
+4. Install dependencies
+   #+BEGIN_SRC sh
+   pip install -r requirements.txt
+   #+END_SRC
+5. Run the program
+    #+BEGIN_SRC sh
+    python event-finder.py address distance output
+    #+END_SRC
+    
+Where:
+- address: the physical address such as "Ottawa" or "1220 Merivale Road"
+- distance: the distance in km such as "100km"
+- output: the file where the data will be written to, as JSON
+  
+** Credits
+# Copyright (C) 2018 by Rafi Khan
+
 ** License
 MIT
