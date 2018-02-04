@@ -41,11 +41,17 @@ def aggregator(address=None, within=None):
 def search(query="", address=LOCATION_ADDRESS, within=LOCATION_WITHIN, categories = CATEGORIES):
     """ string, string, number, string -> dict
 
+    Searches Meetup and returns a JSON dict with the results
+
+    query: string of search parameters
+    address: location eg "Ottawa" or "1200 Merivale Road", this is processed by Google Maps Geocoding API
+    within: 
+
     """
 
     lat, lon = util.get_lon_lat(address)
 
-    uri = f"{BASE_URI}/find/upcoming_events/?topic_category={categories}&lat={lat}&lon={lon}&sign=true&key={AUTH_TOKEN}"
+    uri = f"{BASE_URI}/find/upcoming_events/?topic_category={categories}&radius={within}&lat={lat}&lon={lon}&sign=true&key={AUTH_TOKEN}"
     res = util.request(uri)
 
     return res
